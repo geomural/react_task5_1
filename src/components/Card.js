@@ -3,11 +3,11 @@ import React from 'react';
 function Card(props) {
     return (
     <div className="card">
-        {props.imgSrc ? <img src={props.imgSrc} className="card-img-top" alt={props.imgAlt} /> : null}
+        {props.children}
         <div className="card-body">
-            <h5 className="card-title"> {props.header} </h5>
-            {props.children}
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 className="card-title">{props.header}</h5>
+            <p className="card-text"> {props.info} </p>
+            <a href="#" className="btn btn-primary">{props.btnText}</a>
         </div>
     </div>
     )
